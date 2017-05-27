@@ -11,6 +11,9 @@ const async = require("async");
 var timeout = require('async-timeout');
 var prefix = config.prefix
 
+'use strict';
+process.stdout.write('\x1Bc');
+
 function update() {
     fs.writeFile('./cashdb.json', JSON.stringify(cash, null, 2), function (err) {
         if (err) return console.log(err);
@@ -21,8 +24,7 @@ function prettynumber(x) {
 }
 
 client.on('ready', () => {
-    client.user.setGame(">help | "+client.guilds.entries().length+" Guilds")
-    console.log(client.guilds.entries())
+    client.user.setGame(">help | "+client.guilds.array().length+" Guilds")
     console.log(config.name+" bot ready for service!")
 })
 

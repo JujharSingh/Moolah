@@ -1,0 +1,17 @@
+{
+  "name": "moolah",
+  "version": "1.0.0",
+  "description": "Rivalry With Yuu!!!",
+  "author": "Jujhar Singh",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "async": "^2.4.1",
+    "async-timeout": "^1.0.2",
+    "discord.js": "^11.1.0",
+    "mathjs": "^3.13.2",
+    "random-js": "^1.0.8"
+  }
+}
